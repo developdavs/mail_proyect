@@ -1,0 +1,28 @@
+<h1><%= @title %></h1>
+<div class="container">
+	<div class="col-md-4">
+		<%= form_tag("contact") do %>
+			<%= label_tag "nombre", "Nombre" %>
+			<%= text_field_tag "nombre" %>
+	</div>
+	<div class="col-md-4">
+			<%= label_tag "email", "Email" %>
+			<%= email_field_tag "email" %>
+	</div>
+	<div class="col-md-4">		
+			<%= label_tag "asunto", "Asunto" %>
+			<%= text_field_tag "asunto" %>
+	</div>
+	<div class="col-md-4">
+			<%= label_tag "mensaje", "Mensaje" %>
+			<%= text_area_tag "mensaje",nil, :size => "145x10" %>
+			<%= submit_tag "Enviar" %>
+		<% end %>
+	</div>
+</div>
+  <% if flash[:notice] %>
+    <div class="notice"><%= flash[:notice] %></div>
+  <% end %>
+  <% if flash[:error] %>
+    <div class="notice"><%= flash[:error] %></div>
+  <% end %>

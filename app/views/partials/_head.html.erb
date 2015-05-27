@@ -1,0 +1,13 @@
+ <meta charset="UTF-8">
+  <title><%= @title %></title>
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+  <div class="container">
+    <div class="row">
+  	  <ul class="nav nav-pills">
+  	  	<li class="<%= activetab params[:action], 'index' %>"><%= goto "Inicio", "index" %></li> 
+  	  	<li class="<%= activetab params[:action], 'contact' %>"><%= goto "Contacto", "contact" %></li>
+  	  </ul>
+    </div>
+ 	</div>
